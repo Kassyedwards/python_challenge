@@ -11,6 +11,10 @@ Correy=0
 Li=0
 OTolley=0
 percent_won_Khan = 0
+percent_won_Correy=0
+percent_won_Li =0
+percent_won_OTolley =0
+
 
 total_votes=[]
 
@@ -23,36 +27,33 @@ with open("/Users/kassyedwards/Documents/election_data.csv", newline="" ) as csv
         #count (candidates[Khan])
         if row[2]==candidates[0]:
             Khan= Khan+1
+            percent_won_Khan = (int(Khan)/Total)*100
         #count candidates Correy
         if row[2]==candidates[1]:
             Correy=Correy+1
+            percent_won_Correy = (int(Correy)/Total)*100
         #count canddiates Li
         if row[2]==candidates[2]:
             Li=Li+1
+            percent_won_Li = (int(Li)/Total)*100
         #count candidates OTolley
         if row[2]==candidates[3]:
             OTolley=OTolley+1
+            percent_won_OTolley = (int(OTolley)/Total)*100
+
     print(f"the total number of votes cast =", Total)
     print(f"The candidates were", candidates)
-    print(f"Khan recieved ", Khan, "votes")
-    print(f"Correy recieved", Correy, "votes")
-    print(f"Li recieved", Li, "votes")
-    print(f"OTolley recieved", OTolley, "votes")
-#header row exclusion
+    print(f"Khan recieved ", Khan, "votes and", percent_won_Khan, "% of the total votes")
+    print(f"Correy recieved", Correy, "votes and", percent_won_Correy, "% of the total votes")
+    print(f"Li recieved", Li, "votes and", percent_won_Li, "% of the total votes" )
+    print(f"OTolley recieved", OTolley, "votes and", percent_won_OTolley, "% of the total votes")
 
 
 
-        #count(candidates[Correy])
-        #Correy=count.candidates(2)
-        #count(candidates[Li])
-        #Li=count.candidates(3)
-        #count(candidates[O'Tolley])
-        #OTolley=count.candidates(4)
 
-        #percent_won_Khan = (int(Khan)/Total)*100
-        #percent_wo_Correy = (int(Correy)/Total)*100
-        #percent_won_Li = (int(Li)/Total)*100
-        #percent_won_OTolley = (int(OTolley)/Total)*100
+
+
+
 
 
 
